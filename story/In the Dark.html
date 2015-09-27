@@ -10,7 +10,11 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="In the Dark" startnode="40" creator="Twine" creator-version="2.0.8" ifid="49FB776D-0BBE-4813-8BDA-6081E9B54080" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.title-text {
+<tw-storydata name="In the Dark" startnode="40" creator="Twine" creator-version="2.0.8" ifid="49FB776D-0BBE-4813-8BDA-6081E9B54080" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">div {
+  font-size: 100%;	
+}
+
+.title-text {
   font-family: 'Courier New';
 	font-smooth: never;
 	-webkit-font-smoothing: none;
@@ -59,6 +63,7 @@
 #menu {
 	font-size: .75em;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 tw-passage.dark {
@@ -1169,7 +1174,8 @@ Particularly when the shimmering light of [[LoLaS]] glints on her hair.
   (display: &#x27;Menu&#x27;)
   (if: &#x27;dark&#x27; is in (passage:)&#x27;s tags)[(display: &#x27;Dark&#x27;)]
   (else:)[(display: &#x27;Light&#x27;)]
-}&lt;div&gt;</tw-passagedata><tw-passagedata pid="38" name="Menu" tags="" position="50,200">{&lt;span id=&quot;menu&quot;&gt;
+}&lt;div&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Menu" tags="" position="50,200">{&lt;span id=&quot;menu&quot;&gt;
    &lt;table style=&quot;width: 100%&quot;&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left; width: 30%&quot;&gt;In the Dark&lt;/td&gt;
@@ -1177,8 +1183,7 @@ Particularly when the shimmering light of [[LoLaS]] glints on her hair.
       &lt;td style=&quot;text-align: right; width: 30%&quot;&gt;[Save]&lt;save| | [Load]&lt;restore|  (click: ?save)[(savegame: &quot;A&quot;,&quot;Current&quot;)] (click: ?restore)[(loadgame: &quot;A&quot;)]&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/table&gt;
-&lt;/span&gt;}
-</tw-passagedata><tw-passagedata pid="39" name="Footer" tags="footer" position="50,350">&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Hearthchained: In the Dark" tags="title" position="250,50">
+&lt;/span&gt;}</tw-passagedata><tw-passagedata pid="39" name="Footer" tags="footer" position="50,350">&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Hearthchained: In the Dark" tags="title" position="250,50">
 =&gt;&lt;=
 ##&lt;span class=&#x27;title-text&#x27;&gt;HEARTHCHAINED&lt;/span&gt;
 ###In the Dark
