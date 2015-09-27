@@ -48,10 +48,36 @@
 	border: 2px dashed black;
 }
 
-#menu {
+.menu {
 	font-size: .75em;
 	margin-top: 0;
-	margin-bottom: 0;
+}
+
+.menu-table {
+  display: table;
+	width: 100%;
+}
+
+.menu-row {
+  display: table-row;	
+}
+
+.menu-title-cell {
+  display: table-cell;
+	text-align: left;
+	width: 30%;
+}
+
+.menu-identity-cell {
+  display: table-cell;	
+	text-align: center;
+	width: 40%;
+}
+
+.menu-game-cell {
+  display: table-cell;	
+	text-align: right;
+	width: 30%;
 }
 
 tw-passage.dark {
@@ -68,7 +94,9 @@ body.dark {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1162,16 +1190,24 @@ Particularly when the shimmering light of [[LoLaS]] glints on her hair.
   (display: &#x27;Menu&#x27;)
   (if: &#x27;dark&#x27; is in (passage:)&#x27;s tags)[(display: &#x27;Dark&#x27;)]
   (else:)[(display: &#x27;Light&#x27;)]
-}&lt;div&gt;
-</tw-passagedata><tw-passagedata pid="38" name="Menu" tags="" position="50,200">{&lt;span id=&quot;menu&quot;&gt;
-   &lt;table style=&quot;width: 100%&quot;&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left; width: 30%&quot;&gt;In the Dark&lt;/td&gt;
-      &lt;td style=&quot;text-align: center; width: 40%&quot;&gt;(if: $name is not 0)[You are $name.]&lt;/td&gt;
-      &lt;td style=&quot;text-align: right; width: 30%&quot;&gt;[Save]&lt;save| | [Load]&lt;restore|  (click: ?save)[(savegame: &quot;A&quot;,&quot;Current&quot;)] (click: ?restore)[(loadgame: &quot;A&quot;)]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/span&gt;}</tw-passagedata><tw-passagedata pid="39" name="Footer" tags="footer" position="50,350">&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Hearthchained: In the Dark" tags="title" position="250,50">
+}&lt;div&gt;</tw-passagedata><tw-passagedata pid="38" name="Menu" tags="" position="50,200">{
+&lt;div class=&quot;menu&quot;&gt;
+  &lt;div class=&quot;menu-table&quot;&gt;
+    &lt;div class=&quot;menu-row&quot;&gt;
+      &lt;div class=&quot;menu-title-cell&quot;&gt;
+        In the Dark
+      &lt;/div&gt;
+      &lt;div class=&quot;menu-identity-cell&quot;&gt;
+        (if: $name is not 0)[You are $name.]
+      &lt;/div&gt;
+      &lt;div class=&quot;menu-game-cell&quot;&gt;
+        [Save]&lt;save| | [Load]&lt;restore|  (click: ?save)[(savegame: &quot;A&quot;,&quot;Current&quot;)] (click: ?restore)[(loadgame: &quot;A&quot;)]
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+}
+</tw-passagedata><tw-passagedata pid="39" name="Footer" tags="footer" position="50,350">&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Hearthchained: In the Dark" tags="title" position="250,50">
 =&gt;&lt;=
 ##&lt;span class=&#x27;title-text&#x27;&gt;HEARTHCHAINED&lt;/span&gt;
 ###In the Dark
@@ -1387,7 +1423,7 @@ Hazel&#x27;s eyes widen as she takes it all in. This is clearly not how this hap
 
 Or:
 
-&gt; [[Tara: Drop the cool act and rush over to check up on Ransha.-&gt;Tara rushes over to the corner of the allure]]</tw-passagedata><tw-passagedata pid="64" name="Empty" tags="" position="51,646">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="65" name="Tara rushes over to the corner of the allure" tags="dark prompt" position="1450,200">You rush over to the corner of the allure, considering the heft of the massive rock on top of the delicate dynast. She doesn&#x27;t seem to have disappeared?
+&gt; [[Tara: Drop the cool act and rush over to check up on Ransha.-&gt;Tara rushes over to the corner of the allure]]</tw-passagedata><tw-passagedata pid="64" name="Empty" tags="" position="53,645"></tw-passagedata><tw-passagedata pid="65" name="Tara rushes over to the corner of the allure" tags="dark prompt" position="1450,200">You rush over to the corner of the allure, considering the heft of the massive rock on top of the delicate dynast. She doesn&#x27;t seem to have disappeared?
 
 You&#x27;re not sure if that&#x27;s a good thing or not. Or really anything.
 
@@ -2430,11 +2466,11 @@ The troll girl is about to respond when the thought strikes you. &lt;span class=
 
 [&gt; [Tara: Yelp in pain and surprise.]&lt;yelp|]&lt;yelp_prompt|{
 
-}(click: ?yelp)[(replace: ?yelp_prompt)[You yelp involuntarily, in pain and surprise[.
+}(click: ?yelp)[(replace: ?yelp_prompt)[You yelp involuntarily, in pain and surprise.
 
-&gt; [Tara: Use Time mastery to slap Ransha back.]&lt;slap|]&lt;slap_prompt| ] ]{
+[&gt; [Tara: Use Time mastery to slap Ransha back.]&lt;slap|]&lt;slap_prompt| ] ]{
 
-}(click: ?slap)[(replace: ?slap_prompt)[, but this time you&#x27;ve prepared a counter to her alacritous assault.
+}(click: ?slap)[(replace: ?slap_prompt)[But by this time you&#x27;ve already planned to counter anything she might do to you.
 
 When you slap Ransha back, she tries to block it with her hand, but your augmented speed zips past it, making contact with Ransha&#x27;s rough skin. Something like a shark, it feels like worn silk in one direction and ground glass in the other.
 
@@ -2907,7 +2943,7 @@ You&#x27;re told that you need to die in your normal body so that your dream sel
 * Slap decisions are now reflected in text
 * Proper numbered lists
 * Title font is now in a stylesheet
-* Font sizing now scales to original font size rather than the viewport container size
+* Stopped using tables for layout
 
 Version 1.1
 * The word &quot;flips&quot; has completed an acrobatic pirouette back into Tara&#x27;s view of the fight
